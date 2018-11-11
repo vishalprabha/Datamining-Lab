@@ -1,0 +1,13 @@
+install.packages("arules",repos = "http://cran.us.r-project.org")
+install.packages("arulesViz",repos = "http://cran.us.r-project.org")
+
+library(arules)
+library(arulesViz)
+
+patterns = random.patterns(nItems = 1000)
+trans = random.transactions(nItems = 1000, nTrans = 1000, method = "agrawal",  patterns = patterns)
+image(trans)
+rules = apriori(trans, parameter=list(support=0.01, confidence=0.5))
+inspect(rules)
+plot(rules, method="grouped")
+
