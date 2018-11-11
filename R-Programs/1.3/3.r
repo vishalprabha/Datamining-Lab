@@ -1,5 +1,4 @@
-install.packages("arules",repos = "http://cran.us.r-project.org")
-install.packages("arulesViz",repos = "http://cran.us.r-project.org")
+
 
 library(arules)
 library(arulesViz)
@@ -10,4 +9,3 @@ image(trans)
 rules = apriori(trans, parameter=list(support=0.01, confidence=0.5))
 inspect(rules)
 plot(rules, method="grouped")
-
