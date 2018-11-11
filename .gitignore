@@ -2,3 +2,6 @@
 *.settings
 *.metadata
 *.recommenders
+*.classpath
+*.project
+*.Rhistory
