@@ -1,24 +1,24 @@
-data(iris)
+data <- read.csv(file = "input.csv")
 
 # Exploration
-head(iris)
-names(iris)
-attributes(iris)
-summary(iris)
-mean(iris$Sepal.Length)
-median(iris$Sepal.Width)
-range(iris$Petal.Length)
-quantile(iris$Sepal.Length)
-var(iris$Sepal.Length)
-table(iris$Species)
+head(data)
+names(data)
+attributes(data)
+summary(data)
+mean(data$Sepal.Length)
+median(data$Sepal.Width)
+range(data$Petal.Length)
+quantile(data$Sepal.Length)
+var(data$Sepal.Length)
+table(data$Species)
 
-# Covarience and Correlation
-cov(iris$Sepal.Length, iris$Petal.Length)
-cor(iris$Sepal.Length, iris$Petal.Length)
+#Covarience and Correlation
+cov(data$Sepal.Length, data$Petal.Length)
+cor(data$Sepal.Length, data$Petal.Length)
 
-# Visualization
-hist(iris$Sepal.Length)
-plot(density(iris$Sepal.Length))
-pie(table(iris$Species))
-barplot(table(iris$Species))
-plot(iris$Petal.Length)
+#Visualization
+hist(data$Sepal.Length)
+plot(density(data$Sepal.Length))
+pie(table(data$Species))
+barplot(table(data$Species))
+plot(data$Petal.Length)
