@@ -13,7 +13,7 @@
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
       <operator activated="true" class="read_csv" compatibility="8.1.000" expanded="true" height="68" name="Read CSV (2)" width="90" x="112" y="85">
-        <parameter key="csv_file" value="C:\Users\shwetangi sah\Pictures\DM\Studio-Program\biopsy.csv"/>
+        <parameter key="csv_file" value="/Users/vishalprabhachandar/Documents/Programming/DataminingLab/RapidMiner-Programs/1.3/biopsy.csv"/>
         <parameter key="column_separators" value=","/>
         <parameter key="trim_lines" value="false"/>
         <parameter key="use_quotes" value="true"/>
