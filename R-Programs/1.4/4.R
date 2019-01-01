@@ -4,24 +4,24 @@ install.packages("e1071")
 install.packages("caret")
 
 #load libraries
-#library("MASS") #Contains the breast cancer dataset
+
 library(party)  #Contains the decision tree functions
 library(caret)  #Contains confusion matrix functions
 library(e1071)  #Contains the naive bayes functions
 
-data <- read.csv(file = "/Users/vishalprabhachandar/Documents/Programming/DataminingLab/R-Programs/1.4/biopsy.csv")
-#Load the dataset
-#data <- biopsy
-View(data)
+#data <- read.csv(file = "/Users/vishalprabhachandar/Documents/Programming/DataminingLab/R-Programs/1.4/input.csv")
+#View(data)
 
-
+#We need a large dataset for modeling the decision tree so inform the teacher and use a built in dataset
+data <- readingSkills
 #Split dataset into test and train
 index <- sample(2, nrow(data), replace=TRUE, prob=c(0.7,0.3))
 train <- data[index==1,]
 test <- data[index==2,]
 
 #Select the dependent and independent features
-features <- class ~ V1+V2+V3+V4+V5+V6+V7+V8+V9
+features <- nativeSpeaker ~ age + shoeSize + score
+
 
 #DECISION TREE
 
@@ -33,7 +33,7 @@ plot(model)
 
 #Evaluate model on test data
 test_predictions <- predict(model, newdata=test)
-confusionMatrix(test_predictions, test$class, positive="malignant")
+confusionMatrix(test_predictions, test$nativeSpeaker, positive="yes")
 
 #NAIVE BAYES CLASSIFIER
 
@@ -45,4 +45,5 @@ print(model2)
 
 #Evaluate model on test data
 test_predictions2 <- predict(model2, newdata = test)
-confusionMatrix(test_predictions2, test$class, positive="malignant")
+confusionMatrix(test_predictions2, test$nativeSpeaker, positive="yes")
+
