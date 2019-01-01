@@ -2,7 +2,7 @@
 
 #load libraries
 library(cluster)
-
+library(factoextra)
 
 
 #Input dataset
@@ -15,7 +15,7 @@ data$Species<-NULL
 d<- scale(dist(data,method = "euclidian"))
 #KMeans
 kfit <- kmeans(d,3)
-#HClustering 
+#HClustering
 hfit <- hkmeans(d, 3)
 fviz_cluster(kfit, data)
 fviz_cluster(hfit, data)
