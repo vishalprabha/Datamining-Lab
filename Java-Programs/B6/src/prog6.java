@@ -12,7 +12,7 @@ class prog6
 {
 	public static void main(String args[]) throws FileNotFoundException, IOException
 	{
-		BufferedReader csv = new BufferedReader(new FileReader(new File("C:\\Users\\shwetangi sah\\Pictures\\DM\\Java-Programs\\Knn\\src\\data.csv")));
+		BufferedReader csv = new BufferedReader(new FileReader(new File("/Users/vishalprabhachandar/Documents/Programming/DataminingLab/Java-Programs/B6/src/input.csv")));
 		String data = csv.readLine();
 		int a[] = new int[3];
 		int b[] = new int[3];
