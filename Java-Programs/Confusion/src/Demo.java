@@ -43,7 +43,7 @@ public class Demo {
 	
 	public static void main(String[] args) {
 		String filename, delimiter;
-		filename = "C:\\Users\\shwetangi sah\\Pictures\\DM\\Java-Programs\\Confusion\\src\\data.csv";
+		filename = "/Users/vishalprabhachandar/Documents/Programming/DataminingLab/Java-Programs/Confusion/src/data.csv";
 		delimiter = ",";
 		ArrayList<DataPoint> data = getInput(filename, delimiter);
 		double truePositive=0, falsePositive=0, trueNegetive=0 ,falseNegetive=0;
